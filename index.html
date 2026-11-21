@@ -15,7 +15,7 @@
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="Cartão de visitas oficial de Kiara Mila. Jornalista de automobilismo, colunista do #PapoDeGrid, cobertura de F1 e novos patrocínios.">
-    <meta name="keywords" content="Kiara Mila, Jornalista de Automobilismo, Fórmula 1, F1, Papo de Grid, Creator, Mídia Kit">
+    <meta name="keywords" content="Kiara Mila, Jornalista de Automobilismo, F1, Fórmula 1, Papo de Grid, Creator, Mídia Kit">
     <meta name="author" content="Kiara Mila">
     
     <!-- Open Graph / Social Media -->
@@ -44,47 +44,28 @@
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
-        /* Painel translúcido ajustado para maior transparência e visualização do vídeo */
+        /* Painel translúcido */
         .main-glass-panel {
             background: rgba(255, 255, 255, 0.45);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
             border: 1px solid rgba(255, 255, 255, 0.5);
         }
-        /* Garantir cobertura de tela cheia absoluta para o fundo */
-        .bg-video-container iframe {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100vw;
-            height: 100vh;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-            pointer-events: none;
-        }
-        @media (min-aspect-ratio: 16/9) {
-            .bg-video-container iframe {
-                height: 56.25vw;
-            }
-        }
-        @media (max-aspect-ratio: 16/9) {
-            .bg-video-container iframe {
-                width: 177.78vh;
-            }
-        }
     </style>
 </head>
 <body class="h-full bg-black text-gray-900 antialiased overflow-x-hidden relative selection:bg-red-600 selection:text-white">
 
-    <!-- Fundo com Vídeo do Streamable em Tela Cheia Forçada -->
-    <div class="fixed inset-0 w-full h-full overflow-hidden z-0 pointer-events-none bg-black bg-video-container">
-        <iframe 
-            src="https://streamable.com/e/kfbpf4?autoplay=1&muted=1&controls=0&loop=1" 
-            style="border:0;" 
-            allow="autoplay; fullscreen" 
-            title="F1 Background Video">
-        </iframe>
-        <!-- Máscara leve sobre o vídeo para garantir leitura -->
+    <!-- Fundo com Vídeo Local em Tela Cheia -->
+    <div class="fixed inset-0 w-full h-full overflow-hidden z-0 pointer-events-none bg-black">
+        <video 
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            class="w-full h-full object-cover">
+            <source src="./background.mp4" type="video/mp4">
+        </video>
+        <!-- Máscara sobre o vídeo para manter o contraste do conteúdo -->
         <div class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
     </div>
 
@@ -109,7 +90,7 @@
                 </p>
             </header>
 
-            <!-- Lista de Botões Estratégicos (Exatamente 3 Botões) -->
+            <!-- Lista de Botões Estratégicos -->
             <nav class="w-full flex flex-col space-y-3">
 
                 <!-- 1. Instagram -->
@@ -170,7 +151,7 @@
 
             </nav>
 
-            <!-- Rodapé com a Logo KM. Reduzida e Suavizada -->
+            <!-- Rodapé com a Logo KM. -->
             <footer class="mt-6 text-center">
                 <div class="inline-flex items-center font-semibold tracking-[-0.1em] text-gray-800 text-base">
                     <span>KM</span><span class="text-red-600 font-bold ml-px">.</span>
@@ -180,7 +161,7 @@
         </div>
     </main>
 
-    <!-- Modal de Contato (Com e-mail direto funcional) -->
+    <!-- Modal de Contato -->
     <div id="contact-modal" class="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="bg-white/95 backdrop-blur-md rounded-3xl p-6 w-full max-w-sm shadow-2xl border border-white/20 transform scale-95 transition-transform duration-300" id="modal-content">
             <div class="flex items-center justify-between mb-4">
