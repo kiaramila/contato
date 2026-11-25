@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="CmMuI3lpFYZATTMu7IfEE6sgNa3P-n_ZR2YdtvsPBag" />
-    <title>Kiara Mila | Jornalista de Automobilismo & Colunista</title>
+    <title>Kiara Mila – Jornalista de Automobilismo e Motorsport Content Creator | F1 | #PapoDeGrid</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/contato/favicon.ico">
@@ -29,9 +29,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Cartão de visitas oficial de Kiara Mila. Jornalista de automobilismo, colunista do #PapoDeGrid, cobertura de F1 e novos patrocínios.">
-    <meta name="keywords" content="Kiara Mila, Jornalista de Automobilismo, Fórmula 1, F1, Papo de Grid, Creator, Mídia Kit">
+    <meta name="description" content="Kiara Mila é jornalista de automobilismo em Brasília, colunista do #PapoDeGrid e criadora de conteúdo sobre Fórmula 1. Veja colunas, redes sociais e contato para pautas e parcerias.">
+    <meta name="keywords" content="Kiara Mila, Kiara Mila jornalista, Kiara Mila Oliveira, kiara mila matos de oliveira goulart, Kiara Mila F1, Kiara Mila content creator, jornalista de automobilismo, Fórmula 1, F1, Papo de Grid, Brasília">
     <meta name="author" content="Kiara Mila">
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://kiaramila.github.io/contato/">
     
     <!-- Open Graph / WhatsApp, Instagram, Telegram, Facebook e LinkedIn -->
@@ -40,14 +41,14 @@
     <meta property="og:url" content="https://kiaramila.github.io/contato/">
     <meta property="og:title" content="Kiara Mila | Jornalista de Automobilismo">
     <meta property="og:description" content="Jornalista, bastidores da Fórmula 1, artigos e contato comercial.">
-    <meta property="og:image" content="https://i.ibb.co/0jCSnPqB/841844883-18628214461025815-5348061339646913044-n.jpg">
+    <meta property="og:image" content="https://kiaramila.github.io/contato/foto.jpg">
 
     <!-- Twitter / X Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://kiaramila.github.io/contato/">
     <meta name="twitter:title" content="Kiara Mila | Jornalista de Automobilismo">
     <meta name="twitter:description" content="Cartão oficial, bastidores da Fórmula 1, artigos e contato comercial.">
-    <meta name="twitter:image" content="https://i.ibb.co/0jCSnPqB/841844883-18628214461025815-5348061339646913044-n.jpg">
+    <meta name="twitter:image" content="https://kiaramila.github.io/contato/foto.jpg">
     
     <!-- Structured Data (Schema.org) -->
     <script type="application/ld+json">
@@ -58,6 +59,7 @@
         "@type": "Person",
         "name": "Kiara Mila",
         "jobTitle": "Motorsport Journalist",
+        "image": "https://kiaramila.github.io/contato/foto.jpg",
         "sameAs": [
           "https://edestaquebrasilia.com.br/papodegrid",
           "https://instagram.com/kiaramila",
@@ -105,12 +107,65 @@
 
     <!-- Container Principal da Landing Page -->
     <main class="relative z-10 flex flex-col items-center justify-center min-h-full px-4 py-12 sm:py-16">
-        <div class="w-full max-w-md mx-auto flex flex-col items-center main-glass-panel rounded-3xl p-6 sm:p-8 shadow-2xl">
+        <div class="relative w-full max-w-md mx-auto flex flex-col items-center main-glass-panel rounded-3xl p-6 sm:p-8 shadow-2xl">
+
+            <!-- Controles no Topo Direito: Compartilhar e Idioma -->
+            <div class="absolute top-4 right-4 flex items-center space-x-1.5 z-20">
+                <!-- Botão Compartilhar (Open Graph) -->
+                <button
+                    id="share-btn"
+                    onclick="sharePage()"
+                    aria-label="Compartilhar página"
+                    class="w-8 h-8 rounded-xl bg-white/70 hover:bg-white backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center text-gray-800 hover:text-red-600 transition-all duration-200 cursor-pointer">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <circle cx="18" cy="5" r="3" stroke-width="2"/>
+                        <circle cx="6" cy="12" r="3" stroke-width="2"/>
+                        <circle cx="18" cy="19" r="3" stroke-width="2"/>
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke-width="2"/>
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke-width="2"/>
+                    </svg>
+                </button>
+
+                <!-- Botão Seletor de Idioma -->
+                <div class="relative" id="lang-wrapper">
+                    <button
+                        id="lang-btn"
+                        onclick="toggleLangMenu()"
+                        aria-label="Selecionar idioma"
+                        aria-expanded="false"
+                        class="h-8 px-2.5 rounded-xl bg-white/70 hover:bg-white backdrop-blur-md border border-white/60 shadow-sm flex items-center space-x-1.5 text-xs font-bold text-red-600 transition-all duration-200 cursor-pointer">
+                        <svg class="w-3.5 h-3.5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" stroke-width="2"/>
+                            <line x1="2" y1="12" x2="22" y2="12" stroke-width="2"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke-width="2"/>
+                        </svg>
+                        <span id="current-lang-label">PT</span>
+                    </button>
+
+                    <!-- Menu Dropdown de Idiomas -->
+                    <div
+                        id="lang-menu"
+                        class="hidden absolute right-0 mt-1.5 w-28 rounded-2xl bg-white/95 backdrop-blur-md border border-white/60 shadow-xl py-1 overflow-hidden">
+                        <button onclick="setLanguage('pt')" data-lang="pt" class="lang-option w-full px-3 py-2 text-left text-xs font-semibold text-gray-800 hover:bg-red-50 hover:text-red-600 flex items-center justify-between transition-colors cursor-pointer">
+                            <span>PT-BR</span>
+                            <span class="lang-check text-red-600">•</span>
+                        </button>
+                        <button onclick="setLanguage('en')" data-lang="en" class="lang-option w-full px-3 py-2 text-left text-xs font-semibold text-gray-800 hover:bg-red-50 hover:text-red-600 flex items-center justify-between transition-colors cursor-pointer">
+                            <span>EN</span>
+                            <span class="lang-check text-red-600 hidden">•</span>
+                        </button>
+                        <button onclick="setLanguage('es')" data-lang="es" class="lang-option w-full px-3 py-2 text-left text-xs font-semibold text-gray-800 hover:bg-red-50 hover:text-red-600 flex items-center justify-between transition-colors cursor-pointer">
+                            <span>ES</span>
+                            <span class="lang-check text-red-600 hidden">•</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
             <!-- Bloco de Perfil / Foto Redonda no Topo -->
-            <header class="text-center mb-6 w-full flex flex-col items-center">
+            <header class="text-center mb-6 mt-2 w-full flex flex-col items-center">
                 <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-white/80 shadow-lg mb-3 flex items-center justify-center bg-gray-200">
-                    <img src="https://i.ibb.co/0jCSnPqB/841844883-18628214461025815-5348061339646913044-n.jpg" alt="Kiara Mila" class="w-full h-full object-cover">
+                    <img src="/contato/foto.jpg" alt="Kiara Mila" class="w-full h-full object-cover">
                 </div>
 
                 <!-- Nome -->
@@ -119,7 +174,7 @@
                 </h1>
 
                 <!-- Subtítulo em Linha Única -->
-                <p class="text-[11px] sm:text-xs font-semibold text-gray-800 tracking-wider uppercase mt-1 drop-shadow whitespace-nowrap">
+                <p data-i18n="subtitle" class="text-[11px] sm:text-xs font-semibold text-gray-800 tracking-wider uppercase mt-1 drop-shadow whitespace-nowrap">
                     Jornalista & Motorsport Content Creator
                 </p>
             </header>
@@ -139,7 +194,7 @@
                         </div>
                         <div class="text-left">
                             <span class="block font-semibold text-gray-900 text-sm tracking-tight">Instagram</span>
-                            <span class="block text-[11px] text-gray-600 font-medium">@kiaramila • Bastidores do Paddock</span>
+                            <span data-i18n="ig_sub" class="block text-[11px] text-gray-600 font-medium">@kiaramila • Bastidores do Paddock</span>
                         </div>
                     </div>
                     <div class="text-gray-400 group-hover:text-pink-600 group-hover:translate-x-1 transition-all duration-300">
@@ -157,7 +212,7 @@
                         </div>
                         <div class="text-left">
                             <span class="block font-semibold text-gray-900 text-sm tracking-tight">TikTok</span>
-                            <span class="block text-[11px] text-gray-600 font-medium">@kiaramila_ • Vídeos rápidos e bastidores</span>
+                            <span data-i18n="tt_sub" class="block text-[11px] text-gray-600 font-medium">@kiaramila_ • Vídeos rápidos e bastidores</span>
                         </div>
                     </div>
                     <div class="text-gray-400 group-hover:text-gray-900 group-hover:translate-x-1 transition-all duration-300">
@@ -174,8 +229,8 @@
                             </svg>
                         </div>
                         <div class="text-left">
-                            <span class="block font-semibold text-gray-900 text-sm tracking-tight">Coluna #PapoDeGrid</span>
-                            <span class="block text-[11px] text-gray-600 font-medium">Artigos e análises de pista</span>
+                            <span data-i18n="col_title" class="block font-semibold text-gray-900 text-sm tracking-tight">Coluna #PapoDeGrid</span>
+                            <span data-i18n="col_sub" class="block text-[11px] text-gray-600 font-medium">Artigos e análises de pista</span>
                         </div>
                     </div>
                     <div class="text-gray-400 group-hover:text-red-600 group-hover:translate-x-1 transition-all duration-300">
@@ -192,8 +247,8 @@
                             </svg>
                         </div>
                         <div class="text-left">
-                            <span class="block font-semibold text-gray-900 text-sm tracking-tight">Contato</span>
-                            <span class="block text-[11px] text-gray-600 font-medium">Assessoria, pautas e parcerias</span>
+                            <span data-i18n="contact_title" class="block font-semibold text-gray-900 text-sm tracking-tight">Contato</span>
+                            <span data-i18n="contact_sub" class="block text-[11px] text-gray-600 font-medium">Assessoria, pautas e parcerias</span>
                         </div>
                     </div>
                     <div class="text-gray-400 group-hover:text-red-600 group-hover:translate-x-1 transition-all duration-300">
@@ -213,20 +268,25 @@
         </div>
     </main>
 
+    <!-- Toast de Confirmação (Compartilhar / Copiar Link) -->
+    <div id="share-toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-full bg-gray-900/90 text-white text-xs font-semibold shadow-lg backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        Link copiado!
+    </div>
+
     <!-- Modal de Contato -->
     <div id="contact-modal" class="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="bg-white/95 backdrop-blur-md rounded-3xl p-6 w-full max-w-sm shadow-2xl border border-white/20 transform scale-95 transition-transform duration-300" id="modal-content">
             <div class="flex items-center justify-between mb-4">
-                <h3 class="text-lg font-bold text-gray-900">Contato Comercial</h3>
+                <h3 data-i18n="modal_title" class="text-lg font-bold text-gray-900">Contato Comercial</h3>
                 <button onclick="closeModal()" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-gray-200 transition-colors cursor-pointer">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
             </div>
-            <p class="text-xs text-gray-600 mb-5">
+            <p data-i18n="modal_desc" class="text-xs text-gray-600 mb-5">
                 Para propostas de patrocínio, pautas jornalísticas, cobertura de eventos e assessoria de imprensa:
             </p>
             <div class="space-y-3">
-                <a href="mailto:kiaramila@gmail.com?subject=Contato%20Comercial%20/%20Imprensa%20-%20Kiara%20Mila" class="flex items-center justify-center space-x-2 w-full py-3 px-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl text-sm transition-colors shadow-lg shadow-red-600/25">
+                <a id="mailto-link" href="mailto:kiaramila@gmail.com?subject=Contato%20Comercial%20/%20Imprensa%20-%20Kiara%20Mila" class="flex items-center justify-center space-x-2 w-full py-3 px-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl text-sm transition-colors shadow-lg shadow-red-600/25">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     <span>kiaramila@gmail.com</span>
                 </a>
@@ -234,11 +294,166 @@
         </div>
     </div>
 
-    <!-- Scripts de Controle do Modal e Autoplay Mobile -->
+    <!-- Scripts de Controle: Modal, Autoplay, Idioma e Compartilhamento -->
     <script>
         const modal = document.getElementById('contact-modal');
         const modalContent = document.getElementById('modal-content');
         const bgVideo = document.getElementById('bg-video');
+        const langMenu = document.getElementById('lang-menu');
+        const langBtn = document.getElementById('lang-btn');
+        const langWrapper = document.getElementById('lang-wrapper');
+        const currentLangLabel = document.getElementById('current-lang-label');
+        const mailtoLink = document.getElementById('mailto-link');
+        const shareToast = document.getElementById('share-toast');
+
+        const translations = {
+            pt: {
+                htmlLang: 'pt-BR',
+                label: 'PT',
+                subtitle: 'Jornalista & Motorsport Content Creator',
+                ig_sub: '@kiaramila • Bastidores do Paddock',
+                tt_sub: '@kiaramila_ • Vídeos rápidos e bastidores',
+                col_title: 'Coluna #PapoDeGrid',
+                col_sub: 'Artigos e análises de pista',
+                contact_title: 'Contato',
+                contact_sub: 'Assessoria, pautas e parcerias',
+                modal_title: 'Contato Comercial',
+                modal_desc: 'Para propostas de patrocínio, pautas jornalísticas, cobertura de eventos e assessoria de imprensa:',
+                mail_subject: 'Contato Comercial / Imprensa - Kiara Mila',
+                share_title: 'Kiara Mila | Jornalista de Automobilismo',
+                share_text: 'Jornalista, bastidores da Fórmula 1, artigos e contato comercial.',
+                copied: 'Link copiado!'
+            },
+            en: {
+                htmlLang: 'en',
+                label: 'EN',
+                subtitle: 'Journalist & Motorsport Content Creator',
+                ig_sub: '@kiaramila • Paddock Behind the Scenes',
+                tt_sub: '@kiaramila_ • Quick videos & paddock moments',
+                col_title: '#PapoDeGrid Column',
+                col_sub: 'Articles & trackside analysis',
+                contact_title: 'Contact',
+                contact_sub: 'Press, stories & partnerships',
+                modal_title: 'Business Contact',
+                modal_desc: 'For sponsorship proposals, editorial inquiries, event coverage, and press relations:',
+                mail_subject: 'Business / Press Inquiry - Kiara Mila',
+                share_title: 'Kiara Mila | Motorsport Journalist',
+                share_text: 'Motorsport journalist, Formula 1 paddock behind the scenes, articles, and business inquiries.',
+                copied: 'Link copied!'
+            },
+            es: {
+                htmlLang: 'es',
+                label: 'ES',
+                subtitle: 'Periodista & Motorsport Content Creator',
+                ig_sub: '@kiaramila • Detrás de cámaras del Paddock',
+                tt_sub: '@kiaramila_ • Videos rápidos y bastidores',
+                col_title: 'Columna #PapoDeGrid',
+                col_sub: 'Artículos y análisis de pista',
+                contact_title: 'Contacto',
+                contact_sub: 'Prensa, pautas y alianzas',
+                modal_title: 'Contacto Comercial',
+                modal_desc: 'Para propuestas de patrocinio, pautas periodísticas, cobertura de eventos y prensa:',
+                mail_subject: 'Contacto Comercial / Prensa - Kiara Mila',
+                share_title: 'Kiara Mila | Periodista de Automovilismo',
+                share_text: 'Periodista de automovilismo, bastidores de la Fórmula 1, artículos y contacto comercial.',
+                copied: '¡Enlace copiado!'
+            }
+        };
+
+        let currentLang = localStorage.getItem('km_lang') || 'pt';
+        if (!translations[currentLang]) currentLang = 'pt';
+
+        function applyLanguage(lang) {
+            currentLang = lang;
+            const t = translations[lang];
+            document.documentElement.lang = t.htmlLang;
+            currentLangLabel.textContent = t.label;
+
+            document.querySelectorAll('[data-i18n]').forEach((el) => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) el.textContent = t[key];
+            });
+
+            mailtoLink.href = `mailto:kiaramila@gmail.com?subject=${encodeURIComponent(t.mail_subject)}`;
+
+            document.querySelectorAll('.lang-option').forEach((btn) => {
+                const isSelected = btn.getAttribute('data-lang') === lang;
+                const check = btn.querySelector('.lang-check');
+                if (isSelected) {
+                    btn.classList.add('text-red-600', 'bg-red-50/70');
+                    check.classList.remove('hidden');
+                } else {
+                    btn.classList.remove('text-red-600', 'bg-red-50/70');
+                    check.classList.add('hidden');
+                }
+            });
+
+            localStorage.setItem('km_lang', lang);
+        }
+
+        function setLanguage(lang) {
+            applyLanguage(lang);
+            closeLangMenu();
+        }
+
+        function toggleLangMenu() {
+            const isHidden = langMenu.classList.contains('hidden');
+            langMenu.classList.toggle('hidden');
+            langBtn.setAttribute('aria-expanded', String(isHidden));
+        }
+
+        function closeLangMenu() {
+            langMenu.classList.add('hidden');
+            langBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        function showToast(message) {
+            shareToast.textContent = message;
+            shareToast.classList.remove('opacity-0');
+            shareToast.classList.add('opacity-100');
+            setTimeout(() => {
+                shareToast.classList.remove('opacity-100');
+                shareToast.classList.add('opacity-0');
+            }, 2200);
+        }
+
+        async function sharePage() {
+            const t = translations[currentLang];
+            const shareUrl = document.querySelector('link[rel="canonical"]')?.href || window.location.href;
+            const shareData = {
+                title: t.share_title,
+                text: t.share_text,
+                url: shareUrl
+            };
+
+            if (navigator.share) {
+                try {
+                    await navigator.share(shareData);
+                    return;
+                } catch (err) {
+                    if (err.name === 'AbortError') return;
+                }
+            }
+
+            try {
+                await navigator.clipboard.writeText(shareUrl);
+                showToast(t.copied);
+            } catch {
+                const input = document.createElement('input');
+                input.value = shareUrl;
+                document.body.appendChild(input);
+                input.select();
+                document.execCommand('copy');
+                document.body.removeChild(input);
+                showToast(t.copied);
+            }
+        }
+
+        document.addEventListener('click', (e) => {
+            if (!langWrapper.contains(e.target)) closeLangMenu();
+        });
+
+        applyLanguage(currentLang);
 
         if (bgVideo) {
             bgVideo.muted = true;
